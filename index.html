@@ -2,40 +2,109 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-  <title>内容资料储备库</title>
+  <title>公告中心</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-  <meta name="description" content="跨境营销、AI工具实操与数字出海干货库">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
 
-  <!-- 引入现代感主题（Themeable Vue 风格） -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple.css">
+  <!-- 引入 Docsify 暗黑主题 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify@4/lib/themes/dark.css">
 
   <style>
-    /* 自定义品牌配色与动态效果 */
+    /* 仿币安/科技感深色配色 */
     :root {
-      --theme-color: #2563eb; /* 优雅宝蓝色 */
-      --sidebar-width: 280px;
-      --content-max-width: 900px;
+      --bg-color: #0b0e11;
+      --card-bg: #1e2329;
+      --accent-color: #f0b90b; /* 经典金黄色，可自定 */
+      --text-muted: #848e9c;
+      --border-color: #2b313a;
     }
 
-    /* 侧边栏菜单鼠标悬停平移效果 */
+    body {
+      background-color: var(--bg-color) !important;
+      color: #eaecef;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    /* 侧边栏样式优化 */
+    .sidebar {
+      background-color: #12161c !important;
+      border-right: 1px solid var(--border-color);
+    }
     .sidebar-nav li a {
+      color: #848e9c !important;
       transition: all 0.2s ease;
+      font-size: 15px;
+      padding: 10px 15px;
+      border-radius: 6px;
     }
-    .sidebar-nav li a:hover {
-      transform: translateX(6px);
-      color: var(--theme-color) !important;
+    .sidebar-nav li a:hover, .sidebar-nav li.active > a {
+      color: #ffffff !important;
+      background-color: var(--card-bg) !important;
     }
 
-    /* 全局链接悬停特效 */
-    .markdown-section a:hover {
-      text-decoration: underline;
-      transition: all 0.2s ease;
+    /* 主内容区三栏响应式网格布局 */
+    .announcement-layout {
+      display: flex;
+      gap: 30px;
+      margin-top: 20px;
+    }
+    
+    .main-content-list {
+      flex: 1; /* 中间主要列表占用剩余空间 */
     }
 
-    /* 页面平滑滚动 */
-    html {
-      scroll-behavior: smooth;
+    .right-sidebar {
+      width: 320px; /* 右侧卡片宽度 */
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    /* 右侧营销卡片与文章推荐组件 */
+    .widget-card {
+      background-color: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 20px;
+    }
+
+    .btn-primary {
+      display: block;
+      width: 100%;
+      background-color: var(--accent-color);
+      color: #000000;
+      text-align: center;
+      padding: 10px 0;
+      font-weight: bold;
+      border-radius: 4px;
+      text-decoration: none;
+      margin-top: 15px;
+      transition: opacity 0.2s;
+    }
+    .btn-primary:hover {
+      opacity: 0.9;
+      color: #000;
+    }
+
+    /* 文章列表项样式 */
+    .news-item {
+      padding: 16px 0;
+      border-bottom: 1px solid var(--border-color);
+    }
+    .news-item a {
+      color: #eaecef;
+      font-size: 16px;
+      font-weight: 500;
+      text-decoration: none;
+      display: block;
+      margin-bottom: 6px;
+    }
+    .news-item a:hover {
+      color: var(--accent-color) !important;
+    }
+    .news-date {
+      color: var(--text-muted);
+      font-size: 13px;
     }
   </style>
 </head>
@@ -44,46 +113,20 @@
 
   <script>
     window.$docsify = {
-      name: '<b>内容资料储备库</b>',
-      repo: '', // 可填入你的 GitHub 仓库地址，或留空
-      loadSidebar: true,  // 开启侧边栏导航 (_sidebar.md)
-      loadNavbar: true,   // 开启顶部菜单栏 (_navbar.md)
-      coverpage: true,    // 开启全屏封面 (_coverpage.md)
-      auto2top: true,     // 切换页面时自动回到顶部
-      subMaxLevel: 3,     // 抓取文章 2~3 级标题显示在侧边栏
-      
-      // 全文搜索插件配置
+      name: '<b>公告中心</b>',
+      loadSidebar: true,
+      loadNavbar: true,
+      auto2top: true,
+      subMaxLevel: 2,
       search: {
-        maxAge: 86400000,
-        paths: 'auto',
-        placeholder: '🔍 搜索文档/干货...',
-        noData: '😞 未找到相关内容',
-        depth: 6
-      },
-
-      // 代码块一键复制配置
-      copyCode: {
-        buttonText: '复制',
-        errorText: '错误',
-        successText: '已复制'
+        placeholder: '🔍 搜索公告或文章...',
+        noData: '未找到相关文章'
       }
     }
   </script>
 
-  <!-- Docsify 核心脚本 -->
   <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js"></script>
-  <!-- 现代主题核心 JS -->
-  <script src="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/js/docsify-themeable.min.js"></script>
-  
-  <!-- 实用高级插件 -->
-  <!-- 1. 全文搜索 -->
   <script src="https://cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
-  <!-- 2. 代码一键复制 -->
   <script src="https://cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
-  <!-- 3. 图片点击全屏平滑放大 -->
-  <script src="https://cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
-  <!-- 4. 代码高亮强化 -->
-  <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-python.min.js"></script>
 </body>
 </html>
