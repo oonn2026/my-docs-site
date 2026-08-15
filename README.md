@@ -1,57 +1,31 @@
-# 公告中心
+# <span class="gradient-text">系统控制台</span>
 
-<p style="color: #848e9c;">帮助中心 > 公告中心 > 数字货币及交易对上新</p>
+欢迎进入知识网络。请选择你需要查阅的业务模块：
 
-<div class="announcement-layout">
+<div class="pro-card-container">
 
-  <!-- 中间：公告文章列表 -->
-  <div class="main-content-list">
+  <!-- 卡片 1 -->
+  <a href="#/ecommerce" class="pro-card">
+    <h3>🛒 独立站与出海业务</h3>
+    <p>涵盖从 0 到 1 的站点建设 SOP、转化率优化策略，以及高风险合规产品的应对逻辑与隐私保护方案。</p>
+  </a>
 
-    <div class="news-item">
-      <a href="#/detail1">新增1种 bStocks 代币化证券作为抵押资产 - 2026-08-12</a>
-      <div class="news-date">2026-08-12</div>
-    </div>
+  <!-- 卡片 2 -->
+  <a href="#/ai-automation" class="pro-card">
+    <h3>🤖 AI 自动化工作流</h3>
+    <p>深度解析 Make.com 节点配置、Midjourney / WebUI 高阶绘图 Prompt，赋能电商运营与内容生产。</p>
+  </a>
 
-    <div class="news-item">
-      <a href="#/detail2">交易平台新增 1 种 bStocks 交易对 - 2026-08-12</a>
-      <div class="news-date">2026-08-12</div>
-    </div>
+  <!-- 卡片 3 -->
+  <a href="#/markets" class="pro-card">
+    <h3>📈 宏观市场与美股</h3>
+    <p>全球金融市场基础逻辑梳理，美股核心标的追踪分析，构建 3-5 年中长期的投资认知框架。</p>
+  </a>
 
-    <div class="news-item">
-      <a href="#/detail3">合约即将上线 DOSUSDT U本位永续合约 (2026-08-11)</a>
-      <div class="news-date">2026-08-11</div>
-    </div>
-
-    <div class="news-item">
-      <a href="#/detail4">合约即将上线多个 U本位 TradFi 永续合约 (2026-08-11)</a>
-      <div class="news-date">2026-08-10</div>
-    </div>
-
-  </div>
-
-  <!-- 右侧：活动与推荐卡片 -->
-  <div class="right-sidebar">
-
-    <!-- 右侧卡片 1：推广注册 -->
-    <div class="widget-card" style="text-align: center;">
-      <div style="font-size: 40px; margin-bottom: 10px;">🎁</div>
-      <p style="font-weight: bold; margin: 0;">立即注册，最高可获 100 USDT 交易手续费返还</p>
-      <a href="#" class="btn-primary">立即注册</a>
-    </div>
-
-    <!-- 右侧卡片 2：最新文章 -->
-    <div class="widget-card">
-      <h4 style="margin-top: 0; color: #ffffff;">最新发布文章</h4>
-      <div class="news-item">
-        <a href="#" style="font-size: 14px;">Alpha 交易竞赛：分享 20 万美元等值奖励</a>
-        <div class="news-date">2026-08-12</div>
-      </div>
-      <div class="news-item">
-        <a href="#" style="font-size: 14px;">DeFi 股票专区正式上线：一站式发现第三方代币化股票</a>
-        <div class="news-date">2026-08-10</div>
-      </div>
-    </div>
-
-  </div>
+  <!-- 卡片 4 -->
+  <a href="#/resources" class="pro-card">
+    <h3>🗄️ 隐私与基建资源</h3>
+    <p>免版权视觉/音频素材库，以及确保网络安全、数据匿名和服务器稳健运行的技术栈储备。</p>
+  </a>
 
 </div>
