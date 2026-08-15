@@ -1,10 +1,7 @@
-* **首页**
-  * [网站介绍](README.md)
-
-* **跨境与独立站**
-  * [独立站搭建 SOP](ecommerce/sop.md)
-  * [AI 电商绘图 Prompt 指南](ecommerce/ai-prompts.md)
-
-* **实用工具与资源**
-  * [免版权素材合集](resources/media.md)
-  * [网络安全防护与合规](resources/security.md)
+* 🪙 [数字货币及交易对上新](README.md)
+* 📰 [最新动态](news.md)
+* 🎁 [最新活动](events.md)
+* ⚠️ [下架讯息](delist.md)
+* 💳 [钱包维护动态](wallet.md)
+* ⚙️ [API 更新](api.md)
+* 🪂 [空投说明](airdrop.md)
