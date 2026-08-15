@@ -1,31 +1,27 @@
-# <span class="gradient-text">系统控制台</span>
+# 投研控制台
 
-欢迎进入知识网络。请选择你需要查阅的业务模块：
+欢迎访问加密资产核心智库。请在下方选择你需要阅览的研报或实操模块：
 
 <div class="pro-card-container">
 
-  <!-- 卡片 1 -->
-  <a href="#/ecommerce" class="pro-card">
-    <h3>🛒 独立站与出海业务</h3>
-    <p>涵盖从 0 到 1 的站点建设 SOP、转化率优化策略，以及高风险合规产品的应对逻辑与隐私保护方案。</p>
+  <a href="#/macro" class="pro-card">
+    <h3>📊 宏观市场与叙事</h3>
+    <p>深度解析美联储流动性周期、BTC 减半效应以及 Layer2、AI+Web3 等核心赛道的资金流向预测。</p>
   </a>
 
-  <!-- 卡片 2 -->
-  <a href="#/ai-automation" class="pro-card">
-    <h3>🤖 AI 自动化工作流</h3>
-    <p>深度解析 Make.com 节点配置、Midjourney / WebUI 高阶绘图 Prompt，赋能电商运营与内容生产。</p>
+  <a href="#/defi" class="pro-card">
+    <h3>🏦 DeFi 与链上交互</h3>
+    <p>从 Uniswap LP 组建到借贷协议清算逻辑，提供稳健的链上被动收益（Yield Farming）实操策略。</p>
   </a>
 
-  <!-- 卡片 3 -->
-  <a href="#/markets" class="pro-card">
-    <h3>📈 宏观市场与美股</h3>
-    <p>全球金融市场基础逻辑梳理，美股核心标的追踪分析，构建 3-5 年中长期的投资认知框架。</p>
+  <a href="#/alpha" class="pro-card">
+    <h3>🪂 Alpha 机会与空投</h3>
+    <p>精选高潜力的未发币测试网与主网交互指南，最大化撸毛收益并规避女巫攻击（Sybil Attack）判定。</p>
   </a>
 
-  <!-- 卡片 4 -->
-  <a href="#/resources" class="pro-card">
-    <h3>🗄️ 隐私与基建资源</h3>
-    <p>免版权视觉/音频素材库，以及确保网络安全、数据匿名和服务器稳健运行的技术栈储备。</p>
+  <a href="#/security" class="pro-card">
+    <h3>🛡️ 资产安全与隐私防护</h3>
+    <p>建立绝对匿名的链上交互路径。涵盖冷钱包隔离方案、防范授权钓鱼以及抗追踪的节点配置最佳实践。</p>
   </a>
 
 </div>
