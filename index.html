@@ -2,87 +2,89 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-  <title>核心知识网络</title>
+  <title>Web3 投研与加密资产智库</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
 
-  <!-- 引入纯净暗黑主题作为底层 -->
+  <!-- 引入高端 Web3 专属英文字体 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  
+  <!-- 引入 Docsify 暗黑主题 -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify@4/lib/themes/dark.css">
 
   <style>
     /* =========================================
-       高端定制 CSS：动态科技风 & 毛玻璃质感
+       高端字体与 Web3 质感 UI 系统
        ========================================= */
     :root {
-      --theme-color: #00d2ff; /* 赛博朋克蓝 */
-      --text-color: #e2e8f0;
-      --bg-color: #050505;
-      --glass-bg: rgba(255, 255, 255, 0.03);
-      --glass-border: rgba(255, 255, 255, 0.08);
-      --hover-glow: rgba(0, 210, 255, 0.2);
+      --theme-color: #FCD535; /* 经典机构金/币安黄 */
+      --text-color: #EAECEF;
+      --bg-color: #0B0E11;    /* 深邃交易黑 */
+      --card-bg: #181A20;
+      --glass-border: rgba(255, 255, 255, 0.05);
+      --hover-glow: rgba(252, 213, 53, 0.15);
     }
 
-    /* 动态渐变背景与全局字体 */
+    /* 全局排版与字体优化 */
     body {
       background-color: var(--bg-color) !important;
-      background-image: 
-        radial-gradient(circle at 15% 50%, rgba(0, 210, 255, 0.05), transparent 25%),
-        radial-gradient(circle at 85% 30%, rgba(58, 123, 213, 0.05), transparent 25%) !important;
-      font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
       color: var(--text-color);
+      line-height: 1.7;
+      letter-spacing: 0.3px; /* 增加呼吸感 */
+    }
+
+    /* 标题采用极客几何字体 Space Grotesk */
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Space Grotesk', sans-serif !important;
+      font-weight: 700;
+      letter-spacing: -0.5px;
     }
 
     /* 侧边栏深度定制 */
     .sidebar {
-      background: rgba(5, 5, 5, 0.7) !important;
-      backdrop-filter: blur(15px); /* 毛玻璃侧边栏 */
+      background: var(--bg-color) !important;
       border-right: 1px solid var(--glass-border);
     }
     .sidebar-nav li a {
-      color: #94a3b8 !important;
-      transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-      border-radius: 6px;
-      padding: 8px 16px;
+      color: #848E9C !important;
+      font-size: 14px;
+      transition: all 0.3s ease;
+      border-radius: 4px;
+      padding: 10px 16px;
       margin: 4px 10px;
     }
     .sidebar-nav li a:hover, .sidebar-nav li.active > a {
-      color: #fff !important;
-      background: var(--glass-bg);
-      transform: translateX(5px);
-      box-shadow: -3px 0 0 var(--theme-color);
+      color: #FFF !important;
+      background: var(--card-bg);
+      transform: translateX(6px);
+      box-shadow: -2px 0 0 var(--theme-color);
     }
 
-    /* 正文区域平滑加载动画 (核心动态效果) */
+    /* 页面平滑加载动画 */
     .markdown-section {
-      animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-      max-width: 900px;
+      animation: fadeUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+      max-width: 850px;
     }
     @keyframes fadeUp {
-      0% { opacity: 0; transform: translateY(30px); }
+      0% { opacity: 0; transform: translateY(20px); }
       100% { opacity: 1; transform: translateY(0); }
     }
 
-    /* 渐变流光标题 */
-    .gradient-text {
-      background: linear-gradient(to right, #00d2ff, #3a7bd5);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      font-weight: 800;
-    }
-
-    /* 高端悬停交互卡片 */
+    /* 机构级质感卡片 */
     .pro-card-container {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
-      margin-top: 30px;
+      gap: 24px;
+      margin-top: 40px;
     }
     .pro-card {
-      background: var(--glass-bg);
+      background: var(--card-bg);
       border: 1px solid var(--glass-border);
       border-radius: 12px;
-      padding: 24px;
-      backdrop-filter: blur(10px);
+      padding: 28px;
       transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
       cursor: pointer;
       text-decoration: none !important;
@@ -90,51 +92,50 @@
       color: var(--text-color) !important;
     }
     .pro-card:hover {
-      transform: translateY(-8px) scale(1.02);
+      transform: translateY(-5px);
       border-color: var(--theme-color);
-      box-shadow: 0 12px 40px var(--hover-glow);
+      box-shadow: 0 10px 30px var(--hover-glow);
     }
     .pro-card h3 {
       margin-top: 0;
-      color: #fff;
-      font-size: 1.2rem;
+      color: #FFF;
+      font-size: 1.3rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
     }
     .pro-card p {
-      color: #94a3b8;
-      font-size: 0.9rem;
+      color: #848E9C;
+      font-size: 0.95rem;
       line-height: 1.6;
       margin-bottom: 0;
     }
 
-    /* 隐藏丑陋的默认封面背景 */
+    /* 隐藏默认封面遮罩 */
     .cover { background: transparent !important; }
   </style>
 </head>
 <body>
-  <div id="app">系统初始化中...</div>
+  <div id="app">节点连接中...</div>
 
   <script>
     window.$docsify = {
-      name: '<span class="gradient-text">OONN.XYZ</span>',
+      name: '<b style="font-family: \'Space Grotesk\'; color: #FFF; letter-spacing: 1px;">WEB3 <span style="color: #FCD535;">RESEARCH</span></b>',
       loadSidebar: true,
       loadNavbar: true,
       coverpage: true,
       auto2top: true,
       subMaxLevel: 2,
       
-      // 搜索框高级定制
       search: {
-        placeholder: '检索知识库...',
-        noData: '未匹配到相关数据',
-        depth: 4
+        placeholder: '检索链上数据或研报...',
+        noData: '未在区块中找到相关记录'
       }
     }
   </script>
 
-  <!-- Docsify 核心与高级插件 -->
   <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
 </body>
 </html>
